@@ -1,5 +1,7 @@
+import Titulo from "./Titulo"
+
 function App(){
-  return <h1>Olá Mundo!</h1>
+  return <Titulo />
 }
 
 export default App
