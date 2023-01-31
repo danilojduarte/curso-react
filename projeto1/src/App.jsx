@@ -1,7 +1,12 @@
 import Titulo from "./Titulo"
 
 function App(){
-  return <Titulo />
+  return (
+  <div>
+    <Titulo />
+    <Titulo />
+  </div>
+  ) 
 }
 
 export default App
