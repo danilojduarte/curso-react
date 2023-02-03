@@ -49,6 +49,7 @@ button.add{
     height: 62px;   
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    transition: all .25s ease;
 }
 
 button.add:hover{
@@ -56,8 +57,94 @@ button.add:hover{
     background: #363f88;
 }
 
+.listaTarefas {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 600px;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #363b65;
+    color: black;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.item:hover{
+    background: #151627;
+}
+
+.item span{
+    width: 100%;
+    color: #fff;
+    margin-right: 10px;
+    padding: 10px 15px;
+}
+
+.item.completo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    background: #1e1f2e;
+    border: none;
+    opacity: 0.6;
+}
+
+.item.completo span {
+    width: 100%;
+    color: #4d506e;
+    margin-right: 10px;
+    padding: 10px 15px;
+    text-decoration: line-through;
+}
+
+button.del {
+    background: none;
+    color: #4d506e;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+button.del:hover{
+    background: #ff004c;
+    color: #fff;
+}
+
+button.deleteAll {
+    border: 1px solid #ff004c;
+    background: none;
+    padding: 15px;
+    color: #ff004c;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+button.deleteAll:hover {
+    background: #ff004c;   
+    color: #fff;
+}
+
+
+
+
+
+/* Responsividade */
+
 @media screen and (max-width: 900px) {
     form {
+        width: 100%;
+    }
+    .listaTarefas {
         width: 100%;
     }
 }
