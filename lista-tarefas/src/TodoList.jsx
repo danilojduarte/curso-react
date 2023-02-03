@@ -10,7 +10,7 @@ function TodoList(){
                 type="text"
                 placeholder="Adiconar uma tarefa"
                 />
-                <button type="submit">Add</button>
+                <button className="add" type="submit">Add</button>
             </form>
             <div className="listaTarefas">
                 <div className="item">
