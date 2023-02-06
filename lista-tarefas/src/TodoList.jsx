@@ -2,12 +2,26 @@ import React, { useState } from "react";
 import './TodoList.css';
 
 function TodoList(){
+
+const [ lista, setLista ] = useState([]);
+const [ novoItem, setNovoItem ] = useState("");
+
+    function adicionaItem(form){
+        form.preventDefault();
+        if (!novoItem) {
+            return;
+        }
+        setLista([...lista, {text: novoItem, isCompleted:false} ])
+    }
+
     return (
         <div>
             <h1>Lista de Tarefas</h1>
-            <form>
+            <form onSubmit={adcionaItem}>
                 <input 
                 type="text"
+                value={novoItem}
+                onChange = {(e) => {setNovoItem(e.target.value)}}
                 placeholder="Adiconar uma tarefa"
                 />
                 <button className="add" type="submit">Add</button>
