@@ -11,7 +11,9 @@ const [ novoItem, setNovoItem ] = useState("");
         if (!novoItem) {
             return;
         }
-        setLista([...lista, {text: novoItem, isCompleted:false} ])
+        setLista([...lista, {text: novoItem, isCompleted:false}]);
+        setNovoItem("");
+        document.getElementById('input-entrada').focus();
     }
 
     return (
@@ -19,6 +21,7 @@ const [ novoItem, setNovoItem ] = useState("");
             <h1>Lista de Tarefas</h1>
             <form onSubmit={adcionaItem}>
                 <input 
+                id="input-entrada"
                 type="text"
                 value={novoItem}
                 onChange = {(e) => {setNovoItem(e.target.value)}}
