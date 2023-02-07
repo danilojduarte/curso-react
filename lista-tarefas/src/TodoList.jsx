@@ -20,7 +20,7 @@ function TodoList() {
     return (
         <div>
             <h1>Lista de Tarefas</h1>
-            <form onSubmit={adcionaItem}>
+            <form onSubmit={adicionaItem}>
                 <input
                     id="input-entrada"
                     type="text"
@@ -38,7 +38,9 @@ function TodoList() {
                             <img className="icone-central" src={Icone} />
                     :
                     lista.map((item, index)=> (
-                        <div className="item">
+                        <div 
+                        className={item.isCompleted ? "item completo" : "item"}
+                        >
                         <span>{item.text}</span>
                         <button className="del">Deletar</button>
                     </div>
