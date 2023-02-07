@@ -31,11 +31,11 @@ function TodoList() {
                 <button className="add" type="submit">Add</button>
             </form>
             <div className="listaTarefas">
-                <div>
+                <div style={{textAlign:'center'}}>
                     {
                         lista.length < 1
                             ?
-                            <img src={Icone} />
+                            <img className="icone-central" src={Icone} />
                     :
                     lista.map((item, index)=> (
                         <div className="item">
