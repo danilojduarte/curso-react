@@ -37,10 +37,14 @@ function TodoList() {
                             ?
                             <img src={Icone} />
                     :
-                            <div className="item">
-                                <span>Tarefa de exemplo</span>
-                                <button className="del">Deletar</button>
-                            </div>
+                    lista.map((item, index)=> (
+                        <div className="item">
+                        <span>{item.text}</span>
+                        <button className="del">Deletar</button>
+                    </div>
+
+                    ))
+                           
                     }
 
                     <div className="item completo">
