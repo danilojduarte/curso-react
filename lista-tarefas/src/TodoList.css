@@ -80,6 +80,7 @@ button.add:hover{
 }
 
 .item span{
+    text-align: start;
     width: 100%;
     color: #fff;
     margin-right: 10px;
@@ -98,6 +99,7 @@ button.add:hover{
 }
 
 .item.completo span {
+    text-align: start;
     width: 100%;
     color: #4d506e;
     margin-right: 10px;
